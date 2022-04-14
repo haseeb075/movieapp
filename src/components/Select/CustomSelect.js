@@ -1,17 +1,14 @@
 import React from 'react'
-import Select from 'react-select/dist/declarations/src/Select'
+import Select from 'react-select';
 
-const options =[
-{label: 'React', value: 'react'},
-{label: 'ReactNative', value: 'react-native'},
-{label: 'JS', value: 'js'},
 
-]
 
 export const CustomSelect = (props) => {
+  const {label, options, onChange, defaultValue} = props;
   return (
     <div>
-      <Select options={options } />
+      <h6>{label}</h6>
+      <Select options={options } onChange={onChange} defaultValue={defaultValue} />
     </div>
   )
 }
