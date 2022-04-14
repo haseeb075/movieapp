@@ -14,7 +14,7 @@ export default function MovieListing() {
 
   let renderMovies, renderShows = ""
   
-  
+  // Render Shows
   renderMovies =
     allmovies.Response === "True" ? (
       allmovies.Search.map((movie, index) => (
@@ -25,6 +25,7 @@ export default function MovieListing() {
     );
 
 
+    // Render shows
     renderShows =
     allshows.Response === "True" ? (
       allshows.Search.map((movie, index) => (
